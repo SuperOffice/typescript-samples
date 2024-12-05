@@ -20,14 +20,12 @@ function randomCountry(): string {
 }
 
 async function getContactEntityAsync(contactId: number): Promise<void> {
-    // Test fetching a contact
     const contactAgent = webApi.getContactAgent();
     const contactEntity = await contactAgent.getContactAsync(4);
-
     console.log(contactEntity.name);
 }
 
-async function insertIntoDatabaseTable(){
+async function insertIntoDatabaseTableAsync(): Promise<void>{
     const databaseTableAgent = webApi.getDatabaseTableAgent();
 
     // Define table columns (non-nullable columns)
@@ -44,13 +42,15 @@ async function insertIntoDatabaseTable(){
         ["Violet", randomCountry(), randomBusiness(), randomCategory()],
     ];
 
-    databaseTableAgent.insertAsync("contact", columns, data);
+    const result = await databaseTableAgent.insertAsync("contact", columns, data);
+    console.log("The operation returned " + result.success);
 }
 
 let webApi = new WebApi("");
 webApi.authenticateWithTicket("");
 webApi.applicationToken("");
 
-getContactEntityAsync(4);
-insertIntoDatabaseTable();
+//getContactEntityAsync(4); // This can me run to test fetching a contact
+
+insertIntoDatabaseTableAsync();
 
