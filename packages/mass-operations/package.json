@@ -1,0 +1,14 @@
+{
+    "name": "@superoffice-ts-samples/mass-operations",
+    "devDependencies": {
+      "@types/node": "*",
+      "typescript": "*",
+      "@superoffice/webapi": "*"
+    },
+    "scripts": {
+      "build": "tsc ./src/mass-operations.ts",
+      "start": "node ./src/mass-operations.js",
+      "execute": "npm run build && npm run start"
+    }
+  }
+  

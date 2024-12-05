@@ -1,0 +1,15 @@
+{
+    "name": "@superoffice-ts-samples/root",
+    "version": "1.0.0",
+    "private": true,
+    "devDependencies": {
+        "typescript": "^5.7.2",
+        "@types/node": "^22.5.5",
+        "@superoffice/webapi": "^10.3.8-1980"
+    },
+    "scripts":{
+        "preinstall": "npx only-allow pnpm",
+        "build:mass-operations": "npm run build --prefix ./packages/mass-operations",
+        "start:mass-operations": "npm run start --prefix ./packages/mass-operations"
+    }
+}
