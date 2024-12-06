@@ -3,7 +3,8 @@
     "devDependencies": {
       "@types/node": "*",
       "typescript": "*",
-      "@superoffice/webapi": "*"
+      "@superoffice/webapi": "*",
+      "@superoffice-ts-samples/systemuserservice": "workspace:*"
     },
     "scripts": {
       "build": "tsc ./src/mass-operations.ts",

@@ -5,11 +5,6 @@
 		"rootDir": "src"
 	},
 	"include": [
-		"src"
-	],
-    "references": [
-		{
-			"path": "../../services/systemuser/tsconfig.json"
-		}
+		"src/*.ts"
 	]
 }

@@ -1,0 +1,10 @@
+{
+    "name": "@superoffice-ts-samples/systemuserservice",
+    "devDependencies": {
+      "jose": "5.9.6"
+    },
+    "scripts":{
+      "build": "tsc ./src/service.ts"
+    }
+  }
+  

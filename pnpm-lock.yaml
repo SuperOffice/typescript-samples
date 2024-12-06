@@ -19,6 +19,10 @@ importers:
         version: 5.7.2
 
   packages/mass-operations:
+    dependencies:
+      '@superoffice-ts-samples/systemuserservice':
+        specifier: workspace:*
+        version: link:../../services/systemuser
     devDependencies:
       '@superoffice/webapi':
         specifier: '*'
@@ -29,6 +33,12 @@ importers:
       typescript:
         specifier: '*'
         version: 5.7.2
+
+  services/systemuser:
+    devDependencies:
+      jose:
+        specifier: 5.9.6
+        version: 5.9.6
 
 packages:
 
@@ -96,6 +106,10 @@ packages:
       asynckit: 0.4.0
       combined-stream: 1.0.8
       mime-types: 2.1.35
+    dev: true
+
+  /jose@5.9.6:
+    resolution: {integrity: sha512-AMlnetc9+CV9asI19zHmrgS/WYsWUwCn2R7RzlbJWD7F9eWYUTGyBmU9o6PxngtLGOiDGPRu+Uc4fhKzbpteZQ==}
     dev: true
 
   /mime-db@1.52.0:

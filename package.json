@@ -10,6 +10,7 @@
     "scripts":{
         "preinstall": "npx only-allow pnpm",
         "build:mass-operations": "npm run build --prefix ./packages/mass-operations",
-        "start:mass-operations": "npm run start --prefix ./packages/mass-operations"
+        "start:mass-operations": "npm run start --prefix ./packages/mass-operations",
+        "build:systemuserservice": "npm run build --prefix ./services/systemuser"
     }
 }
